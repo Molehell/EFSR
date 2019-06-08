@@ -11,16 +11,16 @@ elif [ $Banben -eq 7 ];then
 rpm -Uvh https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 fi
 
-yum -y install gcc --enablerepo=elrepo
-yum -y install libgcc* --enablerepo=elrepo
+yum -y install gcc  --enablerepo=elrepo
+yum -y install libgcc*  --enablerepo=elrepo
 yum -y groupinstall "Development Tools" --enablerepo=elrepo
-yum -y install ncurses-devel --enablerepo=elrepo
+yum -y install ncurses-devel  --enablerepo=elrepo
 yum -y install hmaccalc zlib-devel binutils-devel elfutils-libelf-devel --enablerepo=elrepo
 yum repolist
 yum -y install dracut --enablerepo=elrepo
 yum -y install dracut-kernel --enablerepo=elrepo
 yum -y --enablerepo=elrepo-kernel install kernel-lt 
-yum -y --enablerepo=elrepo-kernel update 
+yum -y --enablerepo=elrepo-kernel  update 
 yum -y --enablerepo=elrepo upgrade 
 yum -y install xe-guest-utilities-xenstore.x86_64 
 
